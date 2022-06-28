@@ -7,7 +7,7 @@
 const {Router} = require('express');
 const router = Router();
 // importacion de funciones de endpoints
-// const usersCtrl = require('../controller/profesionales.controller');
+const usersCtrl = require('../controller/user.controller');
 
 
 
@@ -15,8 +15,9 @@ const router = Router();
 router.get('/', usersCtrl.getStart);
 
 // PROFESIONAL
-// router.get('/profesionales', usersCtrl.getProfesional);
-// router.post('/profesionales', usersCtrl.postProfesional );
+router.post('/registro', usersCtrl.postUser );
+router.get('/login', usersCtrl.getUser);
+
 // router.put('/profesionales', usersCtrl.putProfesional);
 // router.delete('/profesionales', usersCtrl.deleteProfesional);
 
